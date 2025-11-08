@@ -1,0 +1,92 @@
+/* Page container */
+#root {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* Body global styles */
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  color: #1a1a1a;
+}
+
+/* Header */
+#header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #100b22;
+}
+
+/* Section Titles */
+h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #191927;
+}
+
+/* Section wrappers spacing */
+.section,
+#toppings,
+#optionalBaseSub,
+#extraToppings,
+#superFood {
+  margin-bottom: 2.2rem;
+}
+
+/* Checkbox groups  use grid layout */
+.checkbox-group,
+#toppings label,
+#extraToppings label,
+#optionalBaseSub label,
+#superFood label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+
+  padding: 12px 14px;
+  background-color: #f6ecff;
+  border-radius: 10px;
+  border: 2px solid transparent;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  transition: box-shadow 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Checkbox input */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #6a9cff;
+}
+
+/* Hover effect */
+label:hover {
+  border-color: #054eb5;
+  background-color: #f9e6ff;
+}
+
+/* Selected state */
+input[type="checkbox"]:checked + span,
+label:has(input:checked) {
+  border-color: #a375ff; /* softer purple */
+  background-color: #f3eaff; /* very light purple */
+  font-weight: 600;
+
+  transform: translateY(-2px); /* slight lift effect */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease,
+    background-color 0.3s ease, transform 0.3s ease;
+}
